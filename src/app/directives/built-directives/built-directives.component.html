@@ -1,5 +1,41 @@
-<div class="container mt-4">
 
-    <h3>Directives</h3>
-    <div hello >Hello Directives</div>
-</div>
+<app-card title="Normal NgIf">
+   <div class="flex justify-between mx-3 p-3">
+   <ng-template [ngIf]="normalShow">
+    <h3>Hello Ng If</h3>
+   </ng-template>
+    <button class="bg-blue-300 border rounded-lg px-3" (click)="normalShow = !normalShow" >{{normalShow ? 'Hide':'Show'}}</button>
+   </div>
+</app-card>
+
+<app-card title="Short Hand Form NgIf" [marginTop]="true">
+    <div class="flex justify-between mx-3 p-3">
+        <h3 *ngIf="shortHandShow">Short Hand Form NGIF</h3>
+        <button (click)="shortHandShow = !shortHandShow" class="bg-orange-500 px-3 rounded-md">{{shortHandShow ? 'Hide':'Show'}}</button>
+    </div>
+</app-card>
+
+<app-card title="Ng IF ELSE Short Hand Form" [marginTop]="true">
+
+    <div class="flex justify-between p-3">
+        <h3 *ngIf="ifElse else elseContent">This is True!</h3>
+        <ng-template #elseContent>
+            <h3>This is not Ture</h3>
+        </ng-template>
+
+        <button (click)="ifElse = !ifElse" class="bg-orange-500 px-3 rounded-md">{{ifElse ? 'Hide':'Show'}}</button>
+    </div>
+
+</app-card>
+
+<app-card title="Ng If Else Normal" [marginTop]="true">
+
+    <div class="flex justify-between p-3">
+        <ng-template [ngIf]="normal" [ngIfElse]="elseContentnormal">
+            <h3>Right Condition</h3>
+        </ng-template>
+        <ng-template #elseContentnormal>Wrong Condition!</ng-template>
+        <button (click)="normal = !normal" class="bg-orange-500 px-3 rounded-md">{{normal ? 'Hide':'Show'}}</button>
+    </div>
+
+</app-card>

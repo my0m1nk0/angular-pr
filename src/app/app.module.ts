@@ -9,6 +9,9 @@ import { AttributeDirComponent } from './directives/attribute-dir/attribute-dir.
 import { HightLightDirective } from './directives/commons/hightlight.directive';
 import { StructureComponent } from './directives/structure/structure.component';
 import { AppForDirective } from './directives/commons/app-for.directive';
+import { AppCardComponent } from './directives/commons/app-card/app-card.component';
+import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component';
+import { NgForComponent } from './directives/ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AppForDirective } from './directives/commons/app-for.directive';
     AttributeDirComponent,
     HightLightDirective,
     StructureComponent,
-    AppForDirective
+    AppForDirective,
+    AppCardComponent,
+    NgSwitchComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,

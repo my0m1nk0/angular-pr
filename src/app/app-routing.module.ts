@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { BuiltDirectivesComponent } from './directives/built-directives/built-directives.component';
 import { AttributeDirComponent } from './directives/attribute-dir/attribute-dir.component';
 import { StructureComponent } from './directives/structure/structure.component';
+import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component';
+import { NgForComponent } from './directives/ng-for/ng-for.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,12 @@ const routes: Routes = [
   },
   {
     path:'stru',component:StructureComponent
+  },
+  {
+    path:'switch',component:NgSwitchComponent
+  },
+  {
+    path:'for-of',component:NgForComponent
   },
   {
     path:'',redirectTo:'/dir',pathMatch:'full'
